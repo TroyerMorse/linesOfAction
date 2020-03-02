@@ -1,13 +1,313 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Oxanium&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Poppins';
+}
+.board {
+  width: 480px;
+  height: 480px;
+  margin: auto;
+  margin-top: 100px;
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.header {
+  background-color: #ee3453;
+  color: white;
+  height: 75vh;
+  width: 100%;
+  top: 0;
+  padding-top: 25vh;
+}
+
+.inputContainer {
+  display: flex;
+  width: 350px;
+  margin-bottom: 15px;
+  background-color: white;
+  border-radius: 25px;
+  height: 50px;
+}
+
+.head {
+  height: 100px;
+  margin-top: 0;
+}
+
+.forms{
+  width: 350px;
+  margin: auto;
+  margin-bottom: 0;
+}
+
+.icons{
+  color: white;
+  height: 40px;
+  width: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 5px;
+}
+
+input{
+  width: 250px;
+  padding: 10px;
+  outline: none;
+  border: none;
+}
+
+.square {
+  background: rgba(255, 255, 255, 0);
+  border: 1px solid #999;
+  float: left;
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 60px;
+  padding: 0;
+  text-align: center;
+  width: 60px;
+}
+
+
+
+.game {
+  margin: auto;
+  margin-top: 100px;
+  width: 480px;
+  height: 480px;
+  top: 100vh;
+}
+
+.submitt {
+  width: 100px;
+  height: 40px;
+  margin-top: 10px;
+  margin-left: 210px;
+  color: white;
+  background-color: #04E824;
+  border-color: #04E824;
+  border-radius: 20px;
+  border-style: solid;
+  font-size: 20px;
+  font-family: 'Poppins';
+}
+
+.background {
+  font-size: 1000px;
+  color: rgba(238, 52, 83, 0.466);
+  position: fixed;
+  top: -155vh;
+  left: 10vw;
+  z-index: -9999;
+
+}
+.background2 {
+  font-size: 1000px;
+  color: rgba(238, 52, 83, 0.466);
+  position: fixed;
+  top: -155vh;
+  left: 60vw;
+  z-index: -9999;
+}
+
+.turn {
+  width: 100%;
+  font-size: 10px;
+}
+
+
+@media only screen 
+and (min-device-width : 0px) 
+and (max-device-width : 812px)
+and (-webkit-device-pixel-ratio : 3) {
+  body {
+    margin: 0;
+    font-family: 'Poppins';
+  }
+  
+  .header {
+    background-color: #ee3453;
+    color: white;
+    height: 75vh;
+    width: 100%;
+    top: 0;
+    padding-top: 25vh;
+  }
+  
+  .inputContainer {
+    display: flex;
+    width: 350px;
+    margin-bottom: 15px;
+    background-color: white;
+    border-radius: 25px;
+    height: 50px;
+  }
+  
+  .head {
+    height: 100px;
+    margin-top: 0;
+  }
+  
+  .forms{
+    width: 350px;
+    margin: auto;
+    margin-bottom: 0;
+  }
+  
+  .icons{
+    color: white;
+    height: 40px;
+    width: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 5px;
+  }
+  
+  input{
+    width: 250px;
+    padding: 10px;
+    outline: none;
+    border: none;
+  }
+  
+  .square {
+    background: rgba(255, 255, 255, 0);
+    border: 1px solid #999;
+    float: left;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 34px;
+    height: 30px;
+    padding: 0;
+    text-align: center;
+    width: 30px;
+  }
+  
+  
+  
+  .game {
+    margin: auto;
+    margin-top: 100px;
+    width: 240px;
+    height: 80px;
+    top: 100vh;
+  }
+  
+  .submitt {
+    width: 100px;
+    height: 40px;
+    margin-top: 10px;
+    margin-left: 210px;
+    color: white;
+    background-color: #04E824;
+    border-color: #04E824;
+    border-radius: 20px;
+    border-style: solid;
+    font-size: 20px;
+    font-family: 'Poppins';
+  }
+  
+  .background {
+    font-size: 100px;
+    z-index: -9000;
+    position: fixed;
+    top: -65vh;
+    margin: auto;
+    color: rgba(238, 52, 83, 0.466);
+    height: auto;
+    width: auto;
+  }
+  .background2 {
+    font-size: 100px;
+    z-index: -9000;
+    position: fixed;
+    top: -65vh;
+    margin: auto;
+    color: rgba(238, 52, 83, 0.466);
+    height: auto;
+    width: auto;
+  }
+  
+  .turn {
+    width: 100%;
+    font-size: 10px;
+  }
+}
+
+.lds-ellipsis {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ellipsis div {
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #ee3453;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+  margin-top: 50vh;
+}
+.lds-ellipsis div:nth-child(1) {
+  left: 8px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(2) {
+  left: 8px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+  left: 32px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
+}
+
+
+.loadingPage {
+  height: 100vh;
+  width: 100vw;
+  background-color: white;
+}
+
+.loalogo {
+  font-family: "Oxanium";
+  font-size: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 700px;
+  height: 30px;
+  margin-top: 30px;
+  margin-bottom: 0;
 }
